@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarity - Digital Solutions Platform</title>
+    <link rel="icon" href="./assets/img/favicon.png" />
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ============ HEADER / NAV ============ -->
+    <header id="header">
+      <nav aria-label="Primary">
+        <a href="#hero" aria-label="Clarity home">
+          <i class="fa-solid fa-cube" aria-hidden="true"></i>
+          <span>Clarity</span>
+        </a>
+
+        <ul>
+          <li><a href="#hero">Home</a></li>
+
+          <li>
+            <button type="button" id="services-menu-btn" aria-expanded="false" aria-controls="services-mega-menu">
+              Services
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+
+            <!-- Mega Menu -->
+            <div id="services-mega-menu" hidden>
+              <section aria-labelledby="mega-dev">
+                <h3 id="mega-dev">Development</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-code" aria-hidden="true"></i>
+                      <span>Web Development</span>
+                      <small>Custom web applications &amp; websites</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-mobile" aria-hidden="true"></i>
+                      <span>Mobile Apps</span>
+                      <small>iOS &amp; Android native apps</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                      <span>UI/UX Design</span>
+                      <small>User-centered design solutions</small>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section aria-labelledby="mega-infra">
+                <h3 id="mega-infra">Infrastructure &amp; AI</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                      <span>Cloud Solutions</span>
+                      <small>Scalable cloud infrastructure</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                      <span>AI &amp; Machine Learning</span>
+                      <small>Intelligent automation solutions</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-database" aria-hidden="true"></i>
+                      <span>Data Solutions</span>
+                      <small>Database &amp; analytics platforms</small>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section aria-labelledby="mega-mkt">
+                <h3 id="mega-mkt">Marketing</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                      <span>Digital Marketing</span>
+                      <small>SEO, SEM &amp; social media</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>
+                      <span>Content Strategy</span>
+                      <small>Engaging content creation</small>
+                    </a>
+                  </li>
+                </ul>
+
+                <aside>
+                  <h4>Need help choosing?</h4>
+                  <p>Talk to our experts to find the perfect solution for your business.</p>
+                  <a href="#contact">
+                    Contact us
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </aside>
+              </section>
+            </div>
+          </li>
+
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div>
+          <button type="button">Sign In</button>
+          <button type="button">Get Started</button>
+          <button type="button" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" hidden>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li>
+            <button type="button" id="mobile-services-toggle" aria-expanded="false" aria-controls="mobile-services-menu">
+              Services
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="mobile-services-menu" hidden>
+              <section aria-labelledby="m-dev">
+                <h3 id="m-dev">Development</h3>
+                <ul>
+                  <li><a href="#"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Web Development</span><small>Custom websites &amp; web apps</small></a></li>
+                  <li><a href="#"><i class="fa-solid fa-mobile" aria-hidden="true"></i><span>Mobile Apps</span><small>iOS &amp; Android native apps</small></a></li>
+                  <li><a href="#"><i class="fa-solid fa-palette" aria-hidden="true"></i><span>UI/UX Design</span><small>User-centered design solutions</small></a></li>
+                </ul>
+              </section>
+              <section aria-labelledby="m-infra">
+                <h3 id="m-infra">Infrastructure &amp; AI</h3>
+                <ul>
+                  <li><a href="#"><i class="fa-solid fa-cloud" aria-hidden="true"></i><span>Cloud Solutions</span><small>Scalable cloud infrastructure</small></a></li>
+                  <li><a href="#"><i class="fa-solid fa-brain" aria-hidden="true"></i><span>AI &amp; Machine Learning</span><small>Intelligent automation solutions</small></a></li>
+                  <li><a href="#"><i class="fa-solid fa-database" aria-hidden="true"></i><span>Data Solutions</span><small>Database &amp; analytics platforms</small></a></li>
+                </ul>
+              </section>
+              <section aria-labelledby="m-mkt">
+                <h3 id="m-mkt">Marketing</h3>
+                <ul>
+                  <li><a href="#"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Digital Marketing</span><small>SEO, SEM &amp; social media</small></a></li>
+                  <li><a href="#"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i><span>Content Strategy</span><small>Engaging content creation</small></a></li>
+                </ul>
+              </section>
+              <aside>
+                <h4>Need help choosing?</h4>
+                <p>Talk to our experts to find the perfect solution for your business.</p>
+                <a href="#contact">Contact us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </aside>
+            </div>
+          </li>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div>
+          <button type="button">Sign In</button>
+          <button type="button">Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="hero" aria-labelledby="hero-title">
+        <div>
+          <p>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            <span>Transforming Digital Experiences</span>
+          </p>
+
+          <h1 id="hero-title">
+            <span>Digital Solutions</span>
+            <span>That Drive</span>
+            <span>Growth</span>
+          </h1>
+
+          <p>
+            We craft innovative digital experiences that transform businesses and accelerate growth.
+            From cutting-edge web applications to mobile solutions, we deliver technology that makes a difference.
+          </p>
+
+          <div>
+            <button type="button">
+              Start Your Project
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <button type="button">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+              Watch Demo
+            </button>
+          </div>
+
+          <dl>
+            <div>
+              <dt>500+</dt>
+              <dd>Projects Delivered</dd>
+            </div>
+            <div>
+              <dt>98%</dt>
+              <dd>Client Satisfaction</dd>
+            </div>
+            <div>
+              <dt>24/7</dt>
+              <dd>Support</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure>
+          <img
+            src="./assets/img/hero-img.png"
+            alt="Modern digital workspace with multiple screens showing web development, mobile apps, and analytics dashboards"
+          />
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <i class="fa-solid fa-mobile" aria-hidden="true"></i>
+        </figure>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section id="services" aria-labelledby="services-title">
+        <header>
+          <p>
+            <i class="fa-solid fa-cogs" aria-hidden="true"></i>
+            <span>Our Services</span>
+          </p>
+          <h2 id="services-title">
+            <span>Comprehensive</span> <span>Digital Solutions</span>
+          </h2>
+          <p>
+            From concept to deployment, we provide end-to-end digital services that transform your business and engage your customers.
+          </p>
+        </header>
+
+        <ul>
+          <li>
+            <article>
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <h3>Web Development</h3>
+              <p>Custom web applications built with cutting-edge technologies. Responsive, scalable, and optimized for performance.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> React &amp; Next.js Development</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> E-commerce Solutions</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Progressive Web Apps</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <i class="fa-solid fa-mobile" aria-hidden="true"></i>
+              <h3>Mobile Applications</h3>
+              <p>Native and cross-platform mobile apps that deliver exceptional user experiences across all devices.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> iOS &amp; Android Development</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> React Native &amp; Flutter</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> App Store Optimization</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              <h3>Cloud Solutions</h3>
+              <p>Scalable cloud infrastructure and services that grow with your business needs and ensure maximum uptime.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> AWS &amp; Azure Integration</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> DevOps &amp; CI/CD</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Microservices Architecture</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              <h3>AI &amp; Machine Learning</h3>
+              <p>Intelligent solutions powered by artificial intelligence and machine learning to automate and optimize processes.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Predictive Analytics</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Natural Language Processing</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Computer Vision</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              <h3>Digital Marketing</h3>
+              <p>Data-driven marketing strategies that increase brand visibility and drive customer engagement across all channels.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> SEO &amp; SEM Optimization</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Social Media Management</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Content Strategy</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <i class="fa-solid fa-palette" aria-hidden="true"></i>
+              <h3>UI/UX Design</h3>
+              <p>User-centered design that creates intuitive, beautiful, and accessible digital experiences that users love.</p>
+              <ul>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> User Research &amp; Testing</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Wireframing &amp; Prototyping</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Design Systems</li>
+              </ul>
+              <a href="#">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ TECHNOLOGY ============ -->
+      <section id="technology" aria-labelledby="tech-title">
+        <header>
+          <p>
+            <i class="fa-solid fa-cog" aria-hidden="true"></i>
+            <span>Technology Stack</span>
+          </p>
+          <h2 id="tech-title">
+            <span>Cutting-Edge</span> <span>Technologies</span>
+          </h2>
+          <p>We leverage the latest technologies and frameworks to build scalable, secure, and high-performance solutions.</p>
+        </header>
+
+        <div role="tablist" aria-label="Technology categories">
+          <button type="button" role="tab" aria-selected="true"  aria-controls="frontend" id="tab-frontend"><i class="fa-solid fa-code" aria-hidden="true"></i> Frontend</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="backend"  id="tab-backend"><i class="fa-solid fa-server" aria-hidden="true"></i> Backend</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="mobile"   id="tab-mobile"><i class="fa-solid fa-mobile" aria-hidden="true"></i> Mobile</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="cloud"    id="tab-cloud"><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="database" id="tab-database"><i class="fa-solid fa-database" aria-hidden="true"></i> Database</button>
+        </div>
+
+        <!-- FRONTEND PANEL -->
+        <article id="frontend" role="tabpanel" aria-labelledby="tab-frontend">
+          <header>
+            <h3>Frontend Technologies</h3>
+            <p>Modern frameworks and libraries for creating exceptional user interfaces</p>
+          </header>
+          <ul>
+            <li>
+              <i class="fa-brands fa-react" aria-hidden="true"></i>
+              <h4>React.js</h4>
+              <p>Component-based library for building interactive user interfaces with virtual DOM</p>
+              <ul><li>JSX</li><li>Hooks</li><li>Redux</li></ul>
+            </li>
+            <li>
+              <span aria-hidden="true">Next</span>
+              <h4>Next.js</h4>
+              <p>Full-stack React framework with server-side rendering and static generation</p>
+              <ul><li>SSR</li><li>SSG</li><li>API Routes</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-vuejs" aria-hidden="true"></i>
+              <h4>Vue.js</h4>
+              <p>Progressive framework for building user interfaces with excellent developer experience</p>
+              <ul><li>Composition API</li><li>Vuex</li><li>Nuxt</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-angular" aria-hidden="true"></i>
+              <h4>Angular</h4>
+              <p>Comprehensive platform for building scalable web applications</p>
+              <ul><li>TypeScript</li><li>RxJS</li><li>CLI</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+              <h4>Tailwind CSS</h4>
+              <p>Utility-first CSS framework for rapid UI development</p>
+              <ul><li>JIT</li><li>Components</li><li>Responsive</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+              <h4>Vite</h4>
+              <p>Next generation frontend tooling with lightning fast builds</p>
+              <ul><li>HMR</li><li>ESM</li><li>Rollup</li></ul>
+            </li>
+          </ul>
+        </article>
+
+        <!-- BACKEND PANEL -->
+        <article id="backend" role="tabpanel" aria-labelledby="tab-backend" hidden>
+          <header>
+            <h3>Backend Technologies</h3>
+            <p>Robust server-side technologies for scalable and secure applications</p>
+          </header>
+          <ul>
+            <li>
+              <i class="fa-brands fa-node-js" aria-hidden="true"></i>
+              <h4>Node.js</h4>
+              <p>JavaScript runtime built on Chrome's V8 engine for server-side development</p>
+              <ul><li>Express.js</li><li>NPM</li><li>TypeScript</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-python" aria-hidden="true"></i>
+              <h4>Python</h4>
+              <p>Versatile programming language with powerful frameworks for web development</p>
+              <ul><li>Django</li><li>FastAPI</li><li>Flask</li></ul>
+            </li>
+            <li>
+              <span aria-hidden="true">Go</span>
+              <h4>Golang</h4>
+              <p>Fast, statically typed language designed for modern software development</p>
+              <ul><li>Gin</li><li>Goroutines</li><li>Microservices</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-java" aria-hidden="true"></i>
+              <h4>Java</h4>
+              <p>Enterprise-grade platform with robust frameworks for large-scale applications</p>
+              <ul><li>Spring Boot</li><li>Hibernate</li><li>Maven</li></ul>
+            </li>
+            <li>
+              <span aria-hidden="true">.NET</span>
+              <h4>.NET Core</h4>
+              <p>Cross-platform framework for building modern, cloud-based applications</p>
+              <ul><li>C#</li><li>Entity Framework</li><li>Azure</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-gem" aria-hidden="true"></i>
+              <h4>Ruby</h4>
+              <p>Dynamic language focused on simplicity and productivity</p>
+              <ul><li>Rails</li><li>Sinatra</li><li>RubyGems</li></ul>
+            </li>
+          </ul>
+        </article>
+
+        <!-- MOBILE PANEL -->
+        <article id="mobile" role="tabpanel" aria-labelledby="tab-mobile" hidden>
+          <header>
+            <h3>Mobile Technologies</h3>
+            <p>Native and cross-platform solutions for iOS and Android development</p>
+          </header>
+          <ul>
+            <li>
+              <i class="fa-brands fa-react" aria-hidden="true"></i>
+              <h4>React Native</h4>
+              <p>Cross-platform mobile development using React and JavaScript</p>
+              <ul><li>Expo</li><li>Navigation</li><li>Redux</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile" aria-hidden="true"></i>
+              <h4>Flutter</h4>
+              <p>Google's UI toolkit for building natively compiled applications</p>
+              <ul><li>Dart</li><li>Widgets</li><li>Material</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              <h4>iOS Native</h4>
+              <p>Native iOS development using Swift and Xcode</p>
+              <ul><li>Swift</li><li>SwiftUI</li><li>Core Data</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-android" aria-hidden="true"></i>
+              <h4>Android Native</h4>
+              <p>Native Android development using Kotlin and Android Studio</p>
+              <ul><li>Kotlin</li><li>Jetpack</li><li>Room</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <h4>Xamarin</h4>
+              <p>Microsoft's cross-platform solution using C# and .NET</p>
+              <ul><li>C#</li><li>Forms</li><li>MVVM</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              <h4>PWA</h4>
+              <p>Progressive Web Apps with native-like mobile experiences</p>
+              <ul><li>Service Worker</li><li>Manifest</li><li>Offline</li></ul>
+            </li>
+          </ul>
+        </article>
+
+        <!-- CLOUD PANEL -->
+        <article id="cloud" role="tabpanel" aria-labelledby="tab-cloud" hidden>
+          <header>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>Modern cloud infrastructure and deployment technologies</p>
+          </header>
+          <ul>
+            <li>
+              <i class="fa-brands fa-aws" aria-hidden="true"></i>
+              <h4>Amazon AWS</h4>
+              <p>Comprehensive cloud computing platform with extensive services</p>
+              <ul><li>EC2</li><li>Lambda</li><li>S3</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+              <h4>Microsoft Azure</h4>
+              <p>Enterprise cloud platform with integrated development tools</p>
+              <ul><li>App Service</li><li>Functions</li><li>DevOps</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+              <h4>Google Cloud</h4>
+              <p>Google's cloud computing platform with AI and ML capabilities</p>
+              <ul><li>Compute Engine</li><li>Cloud Run</li><li>BigQuery</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-docker" aria-hidden="true"></i>
+              <h4>Docker</h4>
+              <p>Containerization platform for consistent application deployment</p>
+              <ul><li>Containers</li><li>Images</li><li>Compose</li></ul>
+            </li>
+            <li>
+              <span aria-hidden="true">K8s</span>
+              <h4>Kubernetes</h4>
+              <p>Container orchestration system for automating deployment and scaling</p>
+              <ul><li>Pods</li><li>Services</li><li>Helm</li></ul>
+            </li>
+            <li>
+              <i class="fa-brands fa-jenkins" aria-hidden="true"></i>
+              <h4>CI/CD Pipeline</h4>
+              <p>Automated build, test, and deployment workflows</p>
+              <ul><li>Jenkins</li><li>GitHub Actions</li><li>GitLab CI</li></ul>
+            </li>
+          </ul>
+        </article>
+
+        <!-- DATABASE PANEL -->
+        <article id="database" role="tabpanel" aria-labelledby="tab-database" hidden>
+          <header>
+            <h3>Database Technologies</h3>
+            <p>Robust data storage solutions for modern applications</p>
+          </header>
+          <ul>
+            <li>
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <h4>PostgreSQL</h4>
+              <p>Advanced open-source relational database with JSON support</p>
+              <ul><li>ACID</li><li>JSON</li><li>Extensions</li></ul>
+            </li>
+            <li>
+              <span aria-hidden="true">Mongo</span>
+              <h4>MongoDB</h4>
+              <p>Flexible NoSQL document database for modern applications</p>
+              <ul><li>Documents</li><li>Aggregation</li><li>Sharding</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-fire" aria-hidden="true"></i>
+              <h4>Redis</h4>
+              <p>In-memory data structure store for caching and real-time applications</p>
+              <ul><li>Cache</li><li>Pub/Sub</li><li>Streams</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <h4>MySQL</h4>
+              <p>Popular open-source relational database management system</p>
+              <ul><li>InnoDB</li><li>Replication</li><li>Clustering</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              <h4>Elasticsearch</h4>
+              <p>Distributed search and analytics engine for complex queries</p>
+              <ul><li>Search</li><li>Analytics</li><li>Kibana</li></ul>
+            </li>
+            <li>
+              <i class="fa-solid fa-project-diagram" aria-hidden="true"></i>
+              <h4>GraphQL</h4>
+              <p>Query language and runtime for APIs with flexible data fetching</p>
+              <ul><li>Schema</li><li>Resolvers</li><li>Apollo</li></ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section id="testimonials" aria-labelledby="testimonials-title">
+        <header>
+          <p>
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <span>Client Testimonials</span>
+          </p>
+          <h2 id="testimonials-title">
+            <span>What Our</span> <span>Clients Say</span>
+          </h2>
+          <p>Don't just take our word for it. Here's what our clients have to say about working with us.</p>
+        </header>
+
+        <div id="testimonials-carousel" aria-roledescription="carousel" aria-label="Client testimonials">
+          <ol id="testimonials-track">
+            <li>
+              <figure>
+                <header>
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div aria-label="Rating: 5 out of 5">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>5.0 Rating</span>
+                  </div>
+                  <p><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</p>
+                </header>
+                <blockquote>
+                  "Clarity transformed our entire digital presence. Their team's expertise and dedication
+                  resulted in a 300% increase in our online sales. Absolutely phenomenal work!"
+                </blockquote>
+                <figcaption>
+                  <img src="./assets/img/avatar-1.jpg" alt="Portrait of Ahmed Al-Farsi" />
+                  <div>
+                    <p>Ahmed Al-Farsi</p>
+                    <p>CEO, RetailMax</p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Verified on LinkedIn</p>
+                  </div>
+                  <div>
+                    <p>300%</p>
+                    <p>Growth</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <header>
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div aria-label="Rating: 5 out of 5">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>5.0 Rating</span>
+                  </div>
+                  <p><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</p>
+                </header>
+                <blockquote>
+                  "The telemedicine platform they built for us has revolutionized how we serve our patients.
+                  The security, reliability, and user experience are all top-notch."
+                </blockquote>
+                <figcaption>
+                  <img src="./assets/img/avatar-2.jpg" alt="Portrait of Dr. Michael Chen" />
+                  <div>
+                    <p>Dr. Michael Chen</p>
+                    <p>Director, MedCare</p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Verified on LinkedIn</p>
+                  </div>
+                  <div>
+                    <p>100K+</p>
+                    <p>Patients</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <header>
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div aria-label="Rating: 5 out of 5">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>5.0 Rating</span>
+                  </div>
+                  <p><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</p>
+                </header>
+                <blockquote>
+                  "Working with Clarity was a game-changer. Their mobile banking app exceeded all our
+                  expectations and has processed over $1 billion in transactions."
+                </blockquote>
+                <figcaption>
+                  <img src="./assets/img/avatar-3.jpg" alt="Portrait of Eslam Salah" />
+                  <div>
+                    <p>Eslam Salah</p>
+                    <p>CTO, FinanceFlow</p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Verified on LinkedIn</p>
+                  </div>
+                  <div>
+                    <p>$1B+</p>
+                    <p>Processed</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <header>
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div aria-label="Rating: 5 out of 5">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>5.0 Rating</span>
+                  </div>
+                  <p><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</p>
+                </header>
+                <blockquote>
+                  "The AI-powered analytics dashboard they created has given us insights we never had before.
+                  Our decision-making process has become so much more data-driven and effective."
+                </blockquote>
+                <figcaption>
+                  <img src="./assets/img/avatar-4.jpg" alt="Portrait of James Wilson" />
+                  <div>
+                    <p>James Wilson</p>
+                    <p>VP of Operations, TechCorp</p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Verified on LinkedIn</p>
+                  </div>
+                  <div>
+                    <p>10X</p>
+                    <p>Insights</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <header>
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div aria-label="Rating: 5 out of 5">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <span>5.0 Rating</span>
+                  </div>
+                  <p><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</p>
+                </header>
+                <blockquote>
+                  "Their cloud migration service was flawless. Zero downtime, improved performance,
+                  and significant cost savings. The team's expertise is unmatched."
+                </blockquote>
+                <figcaption>
+                  <img src="./assets/img/avatar-5.jpg" alt="Portrait of Omar Wael" />
+                  <div>
+                    <p>Omar Wael</p>
+                    <p>IT Director, GlobalTech</p>
+                    <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Verified on LinkedIn</p>
+                  </div>
+                  <div>
+                    <p>0%</p>
+                    <p>Downtime</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+
+          <nav aria-label="Testimonial navigation">
+            <button type="button" data-index="0" aria-label="Go to testimonial 1"></button>
+            <button type="button" data-index="1" aria-label="Go to testimonial 2"></button>
+            <button type="button" data-index="2" aria-label="Go to testimonial 3"></button>
+            <button type="button" data-index="3" aria-label="Go to testimonial 4"></button>
+            <button type="button" data-index="4" aria-label="Go to testimonial 5"></button>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" aria-labelledby="faq-title">
+        <header>
+          <p>
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+            <span>FAQ</span>
+          </p>
+          <h2 id="faq-title">
+            <span>Frequently Asked</span> <span>Questions</span>
+          </h2>
+          <p>Find answers to common questions about our services, process, and how we can help transform your business.</p>
+        </header>
+
+        <div>
+          <details>
+            <summary>
+              <span>What services does Clarity offer?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              We offer a comprehensive range of digital services including web development, mobile applications,
+              cloud solutions, AI &amp; machine learning, digital marketing, and UI/UX design. Our team specializes
+              in creating custom solutions tailored to your specific business needs, from initial concept through
+              to deployment and ongoing support.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <span>How long does a typical project take?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Project timelines vary based on complexity and scope. A simple website might take 4-6 weeks, while
+              a complex web application or mobile app could take 3-6 months. We provide detailed project timelines
+              during our initial consultation and keep you updated throughout the development process with regular
+              milestones and deliverables.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <span>What is your development process?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>We follow an agile development methodology that includes:</p>
+            <ul>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Discovery &amp; Planning:</strong> Understanding your requirements and goals</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Design:</strong> Creating wireframes and visual designs</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Development:</strong> Building your solution with regular updates</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Testing:</strong> Rigorous QA and user testing</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> <strong>Deployment:</strong> Launch and ongoing support</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              <span>Do you provide ongoing support and maintenance?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Yes! We offer comprehensive support and maintenance packages to ensure your solution continues to
+              perform optimally. This includes bug fixes, security updates, performance optimization, feature
+              enhancements, and technical support. We can customize a maintenance plan that fits your specific
+              needs and budget.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <span>What technologies do you work with?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              We work with cutting-edge technologies across the full stack. For frontend, we use React, Vue.js,
+              Angular, and Next.js. Our backend expertise includes Node.js, Python, Golang, and Java. We're
+              proficient in cloud platforms like AWS, Azure, and Google Cloud, and work with both SQL and NoSQL
+              databases. We always choose the best technology stack for your specific project requirements.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <span>How do you ensure project security and data privacy?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <p>
+              Security is our top priority. We implement industry-standard security practices including encryption,
+              secure authentication, regular security audits, and compliance with data protection regulations
+              (GDPR, HIPAA, etc.). All our developers sign NDAs, and we use secure development practices throughout
+              the entire project lifecycle. We also provide security documentation and training for your team.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" aria-labelledby="contact-title">
+        <header>
+          <p>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            <span>Let's Start Your Journey</span>
+          </p>
+          <h2 id="contact-title">
+            <span>Ready to</span> <span>Transform?</span>
+          </h2>
+          <p>Take the first step towards digital excellence. Our experts are ready to turn your vision into reality.</p>
+        </header>
+
+        <div>
+          <div>
+            <header>
+              <h3>Get Your Free Consultation</h3>
+              <p>Fill out the form and we'll get back to you within 24 hours with a personalized proposal.</p>
+            </header>
+
+            <form>
+              <div>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div>
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+              </div>
+
+              <div>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required />
+              </div>
+              <div>
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your Company Name" />
+              </div>
+
+              <div>
+                <label for="interest">Primary Interest</label>
+                <select id="interest" name="interest">
+                  <option>Choose your focus area</option>
+                  <option>Web Development &amp; Design</option>
+                  <option>Mobile App Development</option>
+                  <option>Cloud &amp; Infrastructure</option>
+                  <option>AI &amp; Machine Learning</option>
+                  <option>Digital Marketing &amp; SEO</option>
+                  <option>Complete Digital Transformation</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option>When do you want to start?</option>
+                  <option>Immediately</option>
+                  <option>Within 1 month</option>
+                  <option>Within 3 months</option>
+                  <option>Within 6 months</option>
+                  <option>Just exploring options</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Project Budget Range</legend>
+                <label>
+                  <input type="radio" name="budget" value="25k-50k" />
+                  <span>$25K - $50K</span>
+                  <small>Growth</small>
+                </label>
+                <label>
+                  <input type="radio" name="budget" value="50k-100k" />
+                  <span>$50K - $100K</span>
+                  <small>Scale</small>
+                </label>
+                <label>
+                  <input type="radio" name="budget" value="100k+" />
+                  <span>$100K+</span>
+                  <small>Enterprise</small>
+                </label>
+              </fieldset>
+
+              <div>
+                <label for="message">Tell us about your project</label>
+                <textarea id="message" name="message" rows="5"
+                  placeholder="Describe your project goals, challenges, and what success looks like for you..."></textarea>
+              </div>
+
+              <div>
+                <label>
+                  <input type="checkbox" name="consent" required />
+                  <span>I agree to receive communications and accept the <a href="#">Privacy Policy</a></span>
+                </label>
+              </div>
+
+              <button type="submit">
+                Get My Free Consultation
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+
+          <aside>
+            <h4>Why Choose Clarity?</h4>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div>
+                  <h5>24-Hour Response</h5>
+                  <p>Quick turnaround on all inquiries with detailed project analysis</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield-alt" aria-hidden="true"></i>
+                <div>
+                  <h5>100% Satisfaction</h5>
+                  <p>Money-back guarantee if you're not completely satisfied</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+                <div>
+                  <h5>Expert Team</h5>
+                  <p>150+ certified professionals with 8+ years experience</p>
+                </div>
+              </li>
+            </ul>
+
+            <section>
+              <h5>Direct Contact</h5>
+              <address>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:hello@clarity.com">hello@clarity.com</a></p>
+                <p><i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i> San Francisco, CA</p>
+              </address>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="footer">
+      <div>
+        <div>
+          <a href="#hero" aria-label="Clarity home">
+            <i class="fa-solid fa-cube" aria-hidden="true"></i>
+            <span>Clarity</span>
+          </a>
+          <p>Transforming businesses through innovative digital solutions and cutting-edge technology.</p>
+        </div>
+
+        <nav aria-label="Social">
+          <ul>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble" aria-hidden="true"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <p><small>&copy; 2025 Clarity. All rights reserved.</small></p>
+        <p>
+          <small>
+            Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> for amazing experiences
+          </small>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

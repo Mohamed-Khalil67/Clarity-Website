@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-v20-latin-regular.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+:root {
+  /* Brand palette (extracted from clarity-seven-drab.vercel.app) */
+  --color-primary:   #ea580c;   /* orange-600  — main brand orange */
+  --color-secondary: #c2410c;   /* orange-700  — deeper orange for gradients */
+  --color-accent:    #fb923c;   /* orange-400  — lighter highlight */
+  --color-dark:      #7c2d12;   /* orange-900  — headings / dark text */
+  --color-light:     #fff7ed;   /* orange-50   — soft section background */
+
+  /* Neutrals */
+  --color-white:     #ffffff;
+  --color-black:     #000000;
+  --color-gray-50:   #f9fafb;
+  --color-gray-100:  #f3f4f6;
+  --color-gray-200:  #e5e7eb;
+  --color-gray-300:  #d1d5db;
+  --color-gray-500:  #6b7280;
+  --color-gray-600:  #4b5563;
+  --color-gray-700:  #374151;
+  --color-gray-900:  #111827;
+
+  /* Common gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-accent:  linear-gradient(135deg, var(--color-accent),  var(--color-primary));
+
+  /* Bootstrap overrides — these let utility classes like .bg-primary, .text-primary,
+     .btn-primary automatically pick up our brand orange instead of Bootstrap blue. */
+  --bs-primary:       var(--color-primary);
+  --bs-primary-rgb:   234, 88, 12;
+  --bs-secondary:     var(--color-secondary);
+  --bs-secondary-rgb: 194, 65, 12;
+  --bs-body-color:    var(--color-gray-700);
+  --bs-body-bg:       var(--color-white);
+}
