@@ -123,7 +123,7 @@ address {
 }
 
 section {
-  padding-block: 3rem;
+  padding-block: 5rem;
   scroll-margin-top: 80px;
 }
 
@@ -181,7 +181,7 @@ section {
 }
 
 .section-eyebrow {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -204,7 +204,7 @@ section {
 
 /* Section description */
 .section-sub {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--gray-600);
   max-width: 48rem;
   margin-inline: auto;
@@ -296,12 +296,16 @@ section {
   transform: scaleX(1);
 }
 #header .dropdown-toggle::after {
+  display: none;
+}
+#header .nav-chevron {
+  font-size: 0.7rem;
   transition: transform var(--t);
 }
 #header .dropdown-toggle[aria-expanded='true'] {
   color: var(--primary);
 }
-#header .dropdown-toggle[aria-expanded='true']::after {
+#header .dropdown-toggle[aria-expanded='true'] .nav-chevron {
   transform: rotate(180deg);
 }
 
@@ -904,7 +908,8 @@ section {
 /* ============================================================
    TESTIMONIALS SECTION
    ============================================================ */
-.testimonial-card {
+
+#testimonials .testimonial-card {
   max-width: 860px;
   margin-inline: auto;
   background: var(--white);
@@ -915,35 +920,22 @@ section {
   overflow: hidden;
 }
 
-/* Large decorative quote watermark behind card content */
-.testimonial-card::before {
-  content: '\201C';
-  position: absolute;
-  top: -3rem;
-  left: 1rem;
-  font-size: 16rem;
-  line-height: 1;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: var(--primary);
-  opacity: 0.05;
-  pointer-events: none;
-  user-select: none;
-}
-
 /* Gradient overlay that fades in on card hover */
-.testimonial-hover-overlay {
+.testimonial-card::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, transparent 50%, rgba(var(--primary-rgb), 0.03) 100%);
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, transparent 50%, rgba(var(--primary-rgb), 0.05) 100%);
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
+  border-radius: inherit;
 }
-.testimonial-card:hover .testimonial-hover-overlay {
+.testimonial-card:hover::before {
   opacity: 1;
 }
 
-/* Quote icon box — 4×4rem gradient tile */
+/* Quote icon box */
 .testimonial-quote-box {
   width: 4rem;
   height: 4rem;
@@ -986,9 +978,10 @@ section {
 
 /* Divider between quote and author */
 .testimonial-divider {
-  border-color: var(--gray-200);
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--gray-300), transparent);
   margin-block: 1.5rem;
-  opacity: 1;
 }
 
 /* Avatar wrapper — needed for badge overlay */
@@ -1002,7 +995,6 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(var(--primary-rgb), 0.25);
-  display: block;
 }
 /* Small check badge in bottom-right corner of avatar */
 .testimonial-avatar-badge {
@@ -1052,111 +1044,119 @@ section {
 
 /* Nav row: ← [dots] → */
 .testimonial-nav {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
-/* Circle prev / next buttons */
-.testimonial-ctrl {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  background: var(--white);
-  border: 1.5px solid var(--gray-200);
-  color: var(--gray-600);
-  font-size: 0.8rem;
-  flex-shrink: 0;
-  cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition:
-    background var(--t),
-    border-color var(--t),
-    color var(--t),
-    box-shadow var(--t);
-}
-.testimonial-ctrl:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
-}
-
-/* Dots — sit inside .testimonial-nav flex row, gap handles spacing */
+/* Dots */
 .testimonial-dots {
   position: static;
-  margin: 0;
-  padding: 0;
+  gap: 10px;
   justify-content: center;
 }
-.testimonial-dots button {
-  width: 8px !important;
-  height: 4px !important;
-  border-top: none !important;
-  border-bottom: none !important;
-  border-radius: var(--r-full) !important;
-  background: var(--primary) !important;
+.testimonial-dots.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-top: none;
+  border-bottom: none;
+  border-radius: var(--r-full);
+  background: var(--primary);
   opacity: 0.3;
-  flex: none;
-  transition:
-    opacity 0.3s,
-    width 0.3s,
-    border-radius 0.3s;
+  /* flex: none; */
+  transition: all 0.5s;
 }
-.testimonial-dots button:hover {
-  width: 2rem !important;
-  border-radius: var(--r-full) !important;
+.testimonial-dots.carousel-indicators button:hover {
+  width: 2rem;
   opacity: 0.6;
 }
-.testimonial-dots .active {
-  opacity: 1 !important;
-  width: 2rem !important;
-  border-radius: var(--r-full) !important;
+.testimonial-dots.carousel-indicators .active {
+  opacity: 1;
+  width: 2rem;
 }
 
 /* ============================================================
    FAQ SECTION — white bg, clean accordion
    ============================================================ */
 .faq-accordion {
-  max-width: 720px;
+  max-width: 60rem;
   margin-inline: auto;
 }
 
-.faq-item {
+.faq-item,
+.faq-item:first-of-type,
+.faq-item:last-of-type {
   background: var(--white);
-  border: 1px solid var(--gray-100) !important;
-  border-radius: var(--r-2xl) !important;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-2xl);
   margin-bottom: 1rem;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: box-shadow var(--t);
+  transition: border-color var(--t);
+}
+.faq-item:not(:first-of-type) {
+  border-top: 1px solid var(--gray-200);
 }
 .faq-item:hover {
-  box-shadow: 0 4px 16px rgba(var(--primary-rgb), 0.1);
+  border-color: rgba(var(--primary-rgb), 0.3);
 }
 
 .faq-btn {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--gray-900);
+  color: var(--dark);
   background: var(--white);
-  padding: 1.35rem 1.5rem;
-  box-shadow: none !important;
+  padding: 1.5rem;
 }
+.faq-item:first-of-type .faq-btn,
+.faq-item:last-of-type .faq-btn {
+  border-radius: 0;
+}
+.faq-btn:hover {
+  background: var(--gray-50);
+}
+
+/* - Closed → button has .faq-btn.collapsed
+- Open → button has .faq-btn (no .collapsed) */
+/* That means .faq-btn:not(.collapsed) translates to "style the button only when the accordion is open". */
 .faq-btn:not(.collapsed) {
-  color: var(--primary);
-  background: rgba(var(--primary-rgb), 0.02);
+  color: var(--dark);
+  background: none;
+  box-shadow: none;
+}
+.faq-btn:not(.collapsed):hover {
+  background: var(--gray-50);
+}
+.faq-btn:focus {
+  box-shadow: none;
 }
 .faq-btn::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ea580c'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  display: none;
 }
-.faq-btn.collapsed::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+
+/* Circle icon */
+.faq-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgba(var(--primary-rgb), 0.1), rgba(var(--primary-rgb), 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.faq-icon-wrap i {
+  transition: transform var(--t);
+}
+.faq-btn:not(.collapsed) .faq-icon-wrap i {
+  transform: rotate(180deg);
 }
 
 .faq-body {
-  font-size: 0.9rem;
+  font-size: 16px;
   color: var(--gray-600);
   line-height: 1.75;
   padding: 0 1.5rem 1.5rem;
+  margin-top: 10px;
 }
 
 .faq-list li {
@@ -1171,7 +1171,7 @@ section {
 }
 
 /* ============================================================
-   CONTACT SECTION — white bg with decorative blobs
+   CONTACT SECTION
    ============================================================ */
 #contact {
   position: relative;
@@ -1275,30 +1275,28 @@ textarea.contact-input {
 
 /* Budget options */
 .budget-option {
-  gap: 0.75rem;
-  background: var(--gray-100);
-  border: 2px solid transparent;
+  gap: 0.4rem;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
   border-radius: var(--r-xl);
-  padding: 0.85rem 1rem;
+  padding: 1rem 0.75rem;
   cursor: pointer;
+  height: 100%;
   transition:
     border-color var(--t),
     background var(--t);
 }
 .budget-option:hover {
-  border-color: rgba(var(--primary-rgb), 0.3);
+  border-color: var(--gray-300);
 }
-.budget-option:has(.form-check-input:checked) {
+.budget-option:has(input:checked) {
   border-color: var(--primary);
-  background: rgba(var(--primary-rgb), 0.04);
+  background: rgba(var(--primary-rgb), 0.05);
 }
-.budget-option .form-check-input {
-  cursor: pointer;
-  accent-color: var(--primary);
-  flex-shrink: 0;
+.budget-option:has(input:checked) .budget-label {
+  color: var(--primary);
 }
 .budget-label {
-  flex: 1;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--gray-700);
@@ -1306,10 +1304,7 @@ textarea.contact-input {
 .budget-badge {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--primary);
-  background: rgba(var(--primary-rgb), 0.1);
-  border-radius: var(--r-full);
-  padding: 0.15rem 0.55rem;
+  color: var(--gray-500);
 }
 
 /* Consent */
@@ -1345,63 +1340,66 @@ textarea.contact-input {
   color: #fff;
 }
 
-/* Contact sidebar */
+/* Contact sidebar — gradient panel */
+.contact-sidebar {
+  background: var(--grad-br);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
 .contact-aside-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--dark);
+  color: var(--white);
 }
 
 .contact-feature-icon {
   width: 3rem;
   height: 3rem;
   border-radius: var(--r-xl);
-  background: rgba(var(--primary-rgb), 0.1);
+  background: rgba(255, 255, 255, 0.2);
   font-size: 1.1rem;
-  color: var(--primary);
-  flex-shrink: 0;
+  color: var(--white);
 }
 .contact-feature-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--dark);
+  color: var(--white);
   margin: 0 0 0.25rem;
 }
 .contact-feature-text {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
 }
 
 .contact-direct-box {
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--r-2xl);
-  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
 }
 .contact-direct-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--gray-900);
+  color: var(--white);
 }
 .contact-direct-box address p {
   font-size: 0.9rem;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.85);
   gap: 0.6rem;
 }
 .contact-direct-box address p i {
-  color: var(--primary);
+  color: var(--white);
 }
 .contact-direct-box address a {
-  color: var(--gray-700);
+  color: rgba(255, 255, 255, 0.85);
   transition: color var(--t);
 }
 .contact-direct-box address a:hover {
-  color: var(--primary);
+  color: var(--white);
 }
 
 /* ============================================================
-   FOOTER — white + gray-200 border-top
+   FOOTER
    ============================================================ */
 #footer {
   padding-block: 0;
@@ -1442,9 +1440,7 @@ textarea.contact-input {
   background: var(--gray-100);
   color: var(--gray-600);
   font-size: 0.95rem;
-  transition:
-    background var(--t),
-    color var(--t);
+  transition: all var(--t);
 }
 .footer-social-link:hover {
   background: var(--primary);
@@ -1584,7 +1580,7 @@ textarea.contact-input {
   }
 
   section {
-    padding-block: 4rem;
+    padding-block: 6rem;
   }
   #hero {
     padding-top: 5rem;
