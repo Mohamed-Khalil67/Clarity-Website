@@ -157,13 +157,13 @@ section {
    GLOBAL HELPERS
    ============================================================ */
 .text-primary {
-  color: var(--primary) !important;
+  color: var(--primary);
 }
 .text-secondary {
-  color: var(--secondary) !important;
+  color: var(--secondary);
 }
 .text-dark-brand {
-  color: var(--dark) !important;
+  color: var(--dark);
 }
 
 /* Gradient text */
@@ -198,9 +198,6 @@ section {
   letter-spacing: -0.02em;
   color: var(--dark);
 }
-.section-title .grad-text {
-  /* gradient portion of heading */
-}
 
 /* Section description */
 .section-sub {
@@ -219,7 +216,7 @@ section {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-100);
-  z-index: 1030;
+  /* z-index: 999; */
 }
 
 #header .navbar {
@@ -264,7 +261,7 @@ section {
   position: relative;
 }
 
-/* Animated center-grow underline — span wraps text so underline matches word width, not full nav-link block */
+/* Animated center-grow underline*/
 #header .nav-link:not(.dropdown-toggle) span {
   position: relative;
 }
@@ -450,6 +447,52 @@ section {
   color: var(--secondary);
 }
 
+/* Mega menu desktop: bounded box, centered under navbar */
+@media (min-width: 992px) {
+  #header .container {
+    position: relative;
+  }
+  .navbar-nav .dropdown {
+    position: static;
+  }
+  .dropdown-mega {
+    left: 0;
+    right: 0;
+    min-width: 0;
+    max-width: 65rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Mobile / tablet — collapse overlay + mega menu scroll */
+@media (max-width: 991.98px) {
+  #header .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-xl);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .dropdown-mega {
+    position: absolute;
+    min-width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: var(--r-xl);
+    padding: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* ============================================================
    HERO SECTION
    ============================================================ */
@@ -552,10 +595,12 @@ section {
 /* Hero image card */
 .hero-img-wrap {
   position: relative;
+  padding: 1.5rem;
+  z-index: 900;
 }
 .hero-img-backdrop {
   position: absolute;
-  inset: 0;
+  inset: 1rem;
   background: linear-gradient(to right, rgba(var(--primary-rgb), 0.2), rgba(194, 65, 12, 0.2));
   border-radius: var(--r-3xl);
   transform: rotate(3deg);
@@ -1061,7 +1106,6 @@ section {
   border-radius: var(--r-full);
   background: var(--primary);
   opacity: 0.3;
-  /* flex: none; */
   transition: all 0.5s;
 }
 .testimonial-dots.carousel-indicators button:hover {
@@ -1071,6 +1115,34 @@ section {
 .testimonial-dots.carousel-indicators .active {
   opacity: 1;
   width: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  #testimonialsCarousel .carousel-inner {
+    display: grid;
+    padding: 0.75rem;
+  }
+  #testimonialsCarousel .carousel-item {
+    grid-area: 1 / 1;
+    height: 100%;
+  }
+
+  #testimonials .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  #testimonials .testimonial-card > div {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  #testimonials .testimonial-text {
+    flex-grow: 1;
+  }
 }
 
 /* ============================================================
@@ -1175,7 +1247,6 @@ section {
    ============================================================ */
 #contact {
   position: relative;
-  overflow: hidden;
 }
 
 /* Decorative blur blobs (replicate reference overlay style) */
@@ -1249,10 +1320,7 @@ section {
   border-radius: var(--r-2xl);
   font-size: 0.9rem;
   color: var(--gray-900);
-  transition:
-    background var(--t),
-    border-color var(--t),
-    box-shadow var(--t);
+  transition: all var(--t);
 }
 .contact-input:focus {
   background: var(--white);
@@ -1282,9 +1350,7 @@ textarea.contact-input {
   padding: 1rem 0.75rem;
   cursor: pointer;
   height: 100%;
-  transition:
-    border-color var(--t),
-    background var(--t);
+  transition: all var(--t);
 }
 .budget-option:hover {
   border-color: var(--gray-300);
@@ -1345,7 +1411,6 @@ textarea.contact-input {
   background: var(--grad-br);
   color: var(--white);
   position: relative;
-  overflow: hidden;
 }
 .contact-aside-title {
   font-size: 1.5rem;
@@ -1496,9 +1561,7 @@ textarea.contact-input {
   font-size: 0.875rem;
   font-weight: 600;
   white-space: nowrap;
-  transition:
-    opacity var(--t),
-    box-shadow var(--t);
+  transition: all var(--t);
 }
 .btn-footer-subscribe:hover {
   opacity: 0.9;
@@ -1527,108 +1590,4 @@ textarea.contact-input {
 }
 .footer-made i {
   color: var(--primary);
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-/* Mega menu desktop: bounded box, centered under navbar */
-@media (min-width: 992px) {
-  #header .container-xl {
-    position: relative;
-  }
-  .navbar-nav .dropdown {
-    position: static;
-  }
-  .dropdown-mega {
-    left: 0 !important;
-    right: 0 !important;
-    min-width: 0 !important;
-    max-width: 65rem !important;
-    width: 100% !important;
-    margin-inline: auto !important;
-  }
-}
-/* Mobile collapse panel — white card with shadow */
-@media (max-width: 991.98px) {
-  #header .navbar-collapse {
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid var(--gray-100);
-    border-radius: var(--r-xl);
-    padding: 1rem 1.25rem;
-    margin-top: 0.75rem;
-    box-shadow: var(--shadow-lg);
-  }
-
-  /* Mega menu on mobile: absolutely positioned overlay — does not push page
-     content. Bootstrap's base .navbar-nav .dropdown-menu sets position:static
-     (in-flow accordion); we override that here. */
-  .navbar-nav .dropdown {
-    position: relative;
-  }
-  .dropdown-mega {
-    position: absolute !important;
-    min-width: 100%;
-    left: 0 !important;
-    transform: none !important;
-    border-radius: var(--r-xl);
-    padding: 1rem;
-    max-height: 60vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  section {
-    padding-block: 6rem;
-  }
-  #hero {
-    padding-top: 5rem;
-    min-height: auto;
-  }
-
-  .hero-float-badge.top-right {
-    width: 4rem;
-    height: 4rem;
-    top: -0.75rem;
-    right: -0.75rem;
-  }
-  .hero-float-badge.bottom-left {
-    width: 3.5rem;
-    height: 3.5rem;
-    bottom: -0.75rem;
-    left: -0.75rem;
-  }
-  .hero-float-badge i {
-    font-size: 1.1rem;
-  }
-
-  .tech-tab {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 575.98px) {
-  section {
-    padding-block: 3rem;
-  }
-  #hero {
-    padding-top: 4.5rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 8vw, 2.75rem);
-  }
-  .hero-subtext {
-    font-size: 1rem;
-  }
-
-  .testimonial-card {
-    padding: 1.5rem;
-  }
-  .contact-heading {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
 }
