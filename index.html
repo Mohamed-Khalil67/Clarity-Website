@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarMainScrollSpy" data-bs-offset="5">
+<body data-bs-spy="scroll" data-bs-target="#navbarMainScrollSpy" data-bs-root-margin="0px 0px -80% 0px">
 
   <!-- ============================================================
        HEADER — navbar
@@ -830,7 +830,7 @@
          TESTIMONIALS 
          ============================================================ -->
     <section id="testimonials">
-      <div class=" container">
+      <div class="container">
         <div class="text-center mb-5">
           <p class="section-eyebrow d-inline-flex align-items-center gap-2 mb-3">
             <i class="fa-solid fa-heart" aria-hidden="true"></i> Client Testimonials
@@ -844,7 +844,8 @@
         </div>
 
         <!-- Bootstrap Carousel -->
-        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel"
+          data-bs-interval="5000">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <article class="testimonial-card">
@@ -1077,7 +1078,7 @@
               </article>
             </div>
           </div><!-- /carousel-inner -->
-          <!-- Nav: ← [dots] → -->
+          <!-- Nav: [dots] -->
           <div class="testimonial-nav d-flex align-items-center justify-content-center">
             <div class="testimonial-dots carousel-indicators">
               <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"

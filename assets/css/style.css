@@ -50,6 +50,7 @@
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
   --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
   --gray-500: #6b7280;
   --gray-600: #4b5563;
   --gray-700: #374151;
@@ -87,6 +88,10 @@
 /* ============================================================
    BASE RESET
    ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -95,7 +100,6 @@
 
 body {
   font-family: 'Inter';
-  scroll-behavior: smooth;
   overflow-x: clip;
   position: relative;
 }
@@ -962,7 +966,7 @@ section {
   padding: 2.5rem 3rem;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Gradient overlay that fades in on card hover */
@@ -1087,6 +1091,10 @@ section {
   font-weight: 600;
 }
 
+#testimonialsCarousel .carousel-item > .testimonial-card {
+  width: 100%;
+}
+
 /* Nav row: ← [dots] → */
 .testimonial-nav {
   margin-top: 5rem;
@@ -1119,18 +1127,18 @@ section {
 
 @media (max-width: 991.98px) {
   #testimonialsCarousel .carousel-inner {
-    display: grid;
-    padding: 0.75rem;
+    height: 665px;
   }
   #testimonialsCarousel .carousel-item {
-    grid-area: 1 / 1;
+    height: 100%;
+  }
+  #testimonialsCarousel .carousel-item > .testimonial-card {
     height: 100%;
   }
 
   #testimonials .testimonial-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
 
@@ -1138,10 +1146,6 @@ section {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-  }
-
-  #testimonials .testimonial-text {
-    flex-grow: 1;
   }
 }
 
